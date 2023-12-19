@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const fsPromises = require("fs").promises;
-const data = require("./example.json"); //can export the BSOM from the dependency graph and put it here
+const data = require("./example.json"); //can export the SBOM from the dependency graph and put it here
 
 //https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#searching-github-by-license-type
 type LicenseType =
