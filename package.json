@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  },
+  "name": "license-download-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "undici-types": "^5.26.5"
+  },
+  "author": "Josh Kirwin",
+  "license": "ISC",
+  "description": ""
+}
