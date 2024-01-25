@@ -47,7 +47,7 @@ var _this = this;
 var fs = require("fs");
 var path = require("path");
 var fsPromises = require("fs").promises;
-var data = require("./example.json"); //can export the BSOM from the dependency graph and put it here
+var data = require("./example.json"); //can export the SBOM from the dependency graph and put it here
 function getLicenseList() {
     var licenseList = [];
     for (var _i = 0, _a = data.packages; _i < _a.length; _i++) {
@@ -109,12 +109,14 @@ var downloadLicenseFiles = function () { return __awaiter(_this, void 0, void 0,
                 return [4 /*yield*/, fsPromises.writeFile(path.join("".concat(__dirname, "/licenses"), licenses[i]), text)];
             case 5:
                 _a.sent();
-                console.log("license for ".concat(licenses[i], " (").concat(i, " of ").concat(licenses.length, ") written."));
+                console.log("license for ".concat(licenses[i], " (").concat(i + 1, " of ").concat(licenses.length, ") written."));
                 _a.label = 6;
             case 6:
                 i++;
                 return [3 /*break*/, 2];
-            case 7: return [3 /*break*/, 9];
+            case 7:
+                console.log("Done!");
+                return [3 /*break*/, 9];
             case 8:
                 err_1 = _a.sent();
                 console.error(err_1);

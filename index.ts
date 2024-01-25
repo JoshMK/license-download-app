@@ -101,9 +101,10 @@ const downloadLicenseFiles = async () => {
         text
       );
       console.log(
-        `license for ${licenses[i]} (${i} of ${licenses.length}) written.`
+        `license for ${licenses[i]} (${i + 1} of ${licenses.length}) written.`
       );
     }
+    console.log("Done!");
   } catch (err) {
     console.error(err);
   }
